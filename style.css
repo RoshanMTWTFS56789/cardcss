@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: linear-gradient(
+    45deg,
+    rgba(215, 22, 224, 1) 0%,
+    rgba(252, 105, 7, 1) 91%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-attachment: fixed;
+}
+.wrapper {
+  position: relative;
+  width: 1150px;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.card {
+  width: 300px;
+  height: 380px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 0 10px;
+  position: relative;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  backdrop-filter: blur(15px);
+  transition: 0.3s;
+}
+.heading {
+  color: rgba(255, 255, 255, 0.4);
+  font-family: "Raleway";
+  font-size: 100px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 8%;
+  left: 25%;
+}
+
+.card .header {
+  height: 100%;
+  width: 100%;
+  background: #111;
+  position: relative;
+  text-align: center;
+  padding-top: 20px;
+  clip-path: circle(150px at center 0);
+}
+
+.card .header h1 {
+  color: #fff;
+  font-family: "Raleway";
+  font-size: 52px;
+  font-weight: 60;
+  margin: 0;
+}
+
+.card .content {
+  position: absolute;
+  bottom: 2%;
+  page-break-after: 20px;
+  text-align: center;
+  padding: 20px;
+}
+
+.card .content p {
+  color: #fff;
+  font-family: "Raleway";
+  font-size: 16px;
+}
+.card .content a {
+  position: relative;
+  display: inline-block;
+  padding: 1px 10px;
+  background: #111;
+  border-radius: 40px;
+  margin-top: 15px;
+  color: #fff;
+  box-shadow: none;
+  text-decoration: none;
+  font-family: "Raleway";
+}
+
+.card .img-1 img {
+  border: 0px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 160px;
+  padding-bottom: 25px;
+}
+
+.card .img-2 img {
+  border: 0px solid #ddd;
+  border-radius: 2px;
+  padding: 5px;
+  width: 200px;
+  padding-bottom: 80px;
+}
+
+.card:nth-child(2) .header,
+.card:nth-child(2) .content a {
+  background: #130f40;
+}
+
+.card:nth-child(3) .header,
+.card:nth-child(3) .content a {
+  background: #f9ca24;
+}
+
+.card:nth-child(4) .header,
+.card:nth-child(4) .content a {
+  background: #b71540;
+}
+.wrapper:hover .card {
+  filter: blur(20px);
+  transform: scale(0.9);
+  opacity: 0.5;
+}
+.wrapper .card:hover {
+  filter: blur(0);
+  transform: scale(1.2);
+  opacity: 1;
+}
